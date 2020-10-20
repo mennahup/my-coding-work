@@ -17,16 +17,9 @@ class queue{
    }
    void append(que_type t){
         if(size<que_size){
-        que_arr[rear]=t;
-     //   cout<<"tnfez"<<" t "<<t<<endl;
-      //  cout<<"value "<<que_arr[rear]<<" rear "<<rear<<" front "<<front<<endl;
-      //  cout<<"size app"<<size<<endl;
-        rear=((rear+1)%que_size);
-      //  cout<<"rear last"<<rear<<endl;
-      // que_arr[rear]=t;
-      // cout<<"after inclusion"<<" "<<que_arr[rear]<<" rear "<<rear<<" front "<<front<<endl;
-        size++;
-         cout<<"size app"<<size<<endl;
+         que_arr[rear]=t;
+         rear=((rear+1)%que_size);
+         size++;
         }
         else{
          cout<<"no sufficient space"<<endl; 
@@ -34,16 +27,9 @@ class queue{
         
    }
    void retrieve (que_type*pe){
-      // cout<<"check func"<<endl;
-     // cout<<"front ret"<<front<<endl;
        *pe=que_arr[front];
-     //  cout<<"currnt front"<<front<<endl;
-     //  cout<<"size ret"<<size<<endl;
-     //  cout<<"stored value"<<*pe<<endl;
-      //  front++;
        front=((front+1)%que_size);
         size--;
-   cout<<"size ret"<<size<<endl;
    }
    bool full(void){
        if(size==que_size)
@@ -69,7 +55,6 @@ class queue{
        cout<<"size"<<size<<endl;
        cout<<"front  "<<front<<endl;
        cout<<"rear   "<<rear<<endl;
-     //  cout<<"check"<<check<<endl;
      if(size==que_size ){
       for(int i=front;i<que_size;++i){
            (*pf)(que_arr[i]);
@@ -91,7 +76,7 @@ class queue{
        }
      }
    }
-   void tryyyy (void){
+   void show_content (void){           //trrryyy
        for(int i=0;i<que_size;++i){
            cout<<"arr content"<<que_arr[i]<<endl;
        }
