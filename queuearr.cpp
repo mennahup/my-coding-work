@@ -15,9 +15,12 @@ class queue{
        rear=0;
        size=0;
    }
+    //add an element at the end of the line
    void append(que_type t){
         if(size<que_size){
          que_arr[rear]=t;
+            // after adding an element we have to increment the indicator rare so that it poins to the following empty space
+            //rear is always a multiple of array size+index of the following space so using modules excrat the space index from rear indicator
          rear=((rear+1)%que_size);
          size++;
         }
@@ -26,8 +29,11 @@ class queue{
         }
         
    }
+    //remove an element from the start of a line
    void retrieve (que_type*pe){
        *pe=que_arr[front];
+        //free the space of the element in array is done simply by moving forward so that the pointer will point to the following one next time 
+        // front is always a multiple of the arraysize+index of the following element so using modules excrat the element index from front indicator
        front=((front+1)%que_size);
         size--;
    }
