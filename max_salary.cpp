@@ -24,22 +24,17 @@ string largest_number(vector<string> a) {
  for(int i=0;i<n;++i){
    if(deal[i]>max)
     max=deal[i];
-   // std::cout<<"max"<<max<<std::endl;
+   
 
- } 
-  
-  
-        
+ }       
 
-    
- //std::cout<<"max"<<max<<std::endl;
 //find the no of digits of the greatest no
 while(max/multiple!=0)
 multiple=multiple*10; 
 
 multiple=multiple/10; 
-// std::cout<<"mulitple"<<multiple<<std::endl;
-//try generic
+
+//
 int y[n];
 for(int i=0;i<n;++i){
    if(deal[i]==0){
@@ -54,47 +49,6 @@ for(int i=0;i<n;++i){
   /// std::cout<<"generic mm"<<multiple/y[i]<<std::endl;
     m[i]=multiple/y[i];
 }
- 
- 
-
-
-
-
-// unify base matrix m
- /*
- int x=1;
- for(int i=0;i<n;++i){
-  if(deal[i]==0){
-     m[i]=1;
-     continue;
-    }
-  if(deal[i]/multiple !=0){
-     m[i]=1;
-  std::cout<<"c1"<<m[i]<<std::endl;
-  continue;   
-  }
-  if(((int)deal[i]/multiple)==0){
-    x=multiple/10;
-  if(deal[i]/x !=0){
-   m[i]=10;
-   std::cout<<"c2"<<m[i]<<std::endl;
-   continue;
-  }
-   x=x/10;
-  }
-   if(deal[i]/x !=0){
-     m[i]=100;
-     std::cout<<"c3"<<m[i]<<std::endl;
-     continue;
-     x=x/10;
-     if(deal[i]/x !=0){
-       m[i]=1000;
-       std::cout<<"c4"<<m[i]<<std::endl;
-       continue;
-      }
-    }
-  }
-  */
  //show
 // for(int t=0;t<n;++t)
 //   std::cout<<"mm"<<m[t]<<std::endl;
