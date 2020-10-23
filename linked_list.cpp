@@ -45,10 +45,9 @@ bool insert_node(node**list){
        cin>>v;
         n->value=v;
         n->next=*list;
-       // cout<<"list "<<list<<endl;       
-       // cout<<"n->next"<<n->next<<endl;
+      
         *list=n;
-      //  cout<<"list after process"<<list<<endl;
+    
        
     }
      
@@ -111,9 +110,7 @@ bool del_node(node**list){
         }
         tem=tem->next;
        }
-     //  cout<<"adress of previous node"<<prev<<"its value"<<prev->value<<endl;
-     //  cout<<"adress of following node"<<tem<<"its value"<<endl;
-      // cout<<"deleted adress"<<index<<"its value"<<index->value<<endl;
+    
    //dlete last element
      if(tem==NULL){
         free(index);
