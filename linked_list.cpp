@@ -161,29 +161,7 @@ int main(){
  cout<<"hello"<<endl;
  node*list=NULL;
  node*temp=NULL;
- ////////////////manual node creation//////////////////////
-/*
- node*n=new node;
- if(n!=NULL){
- n->value=0;
- n->next=NULL;
- list=n;
- temp=n;
- }
- node*p=new node;
- if(p!=NULL){
- p->value=1;
- p->next=NULL;
- temp->next=p;
- temp=p;
- }
- node *d=new node;
- if(d!=NULL){
-     d->value=2;
-     d->next=NULL;
-     temp->next=d;
-     temp=d;
- }*/
+
 
 ///////////////////////////// node creation for given no of nodes/////////////////////
  cout<<"enter no of nodes"<<endl;
@@ -243,31 +221,11 @@ for(int i=0;i<no_nodes;i++){
      break;
 
  };
-//search_value(&list);
-//bool c=insert_node(&list);
-// if(c)
-//  return 0;
-    ///////////////////////////
 
-  
-//insertlast(&list);
- // cout<<"list after call"<<list<<endl;
-  //cout<<"list after insert at last"<<endl;
- // for(temp=list;temp!=NULL;temp=temp->next){
-  //    cout<<"value stored"<<temp->value<<endl;
-   // cout<<"next adress"<<temp->next<<endl;
- // }
- //bool d= del_node(&list);
- // if(d){
- //     return 0;
- // }
- // dellast(&list);
-//  cout<<"list after delete last"<<endl;
-   //cout<<"list after call"<<list<<endl;
+
   for(temp=list;temp!=NULL;temp=temp->next){
       cout<<"value stored"<<temp->value<<endl;
-   // cout<<"next adress"<<temp->next<<endl;
-  }
+    }
   
 
   while(list!=NULL){
