@@ -22,10 +22,8 @@ class table{
     t[index]=pn;
     t[index]->value=key;
     t[index]->next=NULL;
-    cout<<"stored in "<<index<<" "<< t[index]->value<<" "<<endl;
     }
     else{
-        cout<<"else"<<endl;
          node*temp=t[index];
         while(temp->next){
             temp=temp->next;
@@ -34,7 +32,6 @@ class table{
         temp->next=pn;
         pn->value=key;
         pn->next=NULL;
-        cout<<"stored in "<<index<<" "<< t[index]->value<<" "<<endl;
     }
 
  }
@@ -44,14 +41,13 @@ class table{
     int index= key%tablesize;
       cout<<"index"<<index<<endl;
      if(t[index]==NULL){
-       cout<<"empty list"<<endl;
      }
      else{
          cout<<"else"<<endl;
          node* temp=t[index];
        while(temp){
            if(temp->value == key){
-              cout<<"if the node to be deleted at the start of list"<<endl;
+              //if the node to be deleted at the start of list
                if(temp==t[index]){
                    cout<<"md5lsh hena leh"<<endl;
                    node *st;
@@ -59,15 +55,14 @@ class table{
                    temp=temp->next;
                    free(st);
                    t[index]=temp;
-                   cout<<"elmoshkela hena"<<t[index]<<endl;
+           
                    break;
                }
               else{
-                  cout<<"general node"<<endl;
+                  //general node
                    foll =temp->next;
                     prev->next=foll;
                     free(temp);
-                    cout<<"mission accomplished"<<endl;
                     break;
                   } 
            }
@@ -75,7 +70,6 @@ class table{
           prev=temp;    
         }
          temp=temp->next;
-         cout<<"try"<<endl;
      }
   }
  }
@@ -108,7 +102,6 @@ int main(){
     t.insert_node(27);
     t.insert_node(22);
     t.display();
-  //  t.delet_node(15);
     t.delet_node(8);
     t.display();
     return 0;
