@@ -1,3 +1,4 @@
+//this code implement graph data structures using the idea of linked list
 #include<iostream>
 using namespace std;
 struct node{
@@ -22,9 +23,7 @@ class graph{
          d=NULL;
      }
     node* add_vertix (char v){
-        cout<<"add vertix"<<endl;
          if(s==NULL){
-             cout<<"why not"<<endl;
            node* r=new node;
             r->vertix=v;
             s=r; 
@@ -32,13 +31,9 @@ class graph{
             return s;
          }
          else{
-             cout<<"else case"<<endl;
              node* temp;
              temp=s;
-             cout<<"where error1"<<endl;
-             cout<<"where error2"<<endl;
              node* r=new node;
-             cout<<"try"<<endl;
              r->vertix=v;
             while(temp->next){
                 temp=temp->next;
@@ -74,7 +69,6 @@ class graph{
     void display_edge(void){
         
         for(edge*temp=d;temp!=NULL;temp=temp->next){
-           // printf("(%s,%s,%d)",temp->ind1->vertix,temp->ind2->vertix,temp->weight);
            cout<<"temp "<<temp<<endl;
            cout<<"V1 V2 WEIGHT "<<temp->ind1->vertix<<" "<<temp->ind2->vertix<<" "<<temp->weight<<endl;
            
@@ -85,13 +79,7 @@ class graph{
         for(node*t=s;t!=NULL;t=t->next){
             cout<<"node"<<t->vertix<<endl;
         }
-    } 
-    void love(void){
-        cout<<"el7md le allah"<<endl;
-    }   
-        
-
-    
+    }     
 };
 int main(){
     graph g;
@@ -102,16 +90,11 @@ int main(){
    r1=g.add_vertix ('A');
    r2=g.add_vertix ('b');
    r3=g.add_vertix ('c');
-    g.display_node();
-    g.love();
- //   g.add_vertix ('d');
-  //  g.add_vertix ('e');
-  g.add_edge(r1,r2,2);
-  g.add_edge(r2,r3,3);
-  g.add_edge(r1,r3,5);
-  g.display_edge();
- 
-
+   g.display_node();
+   g.add_edge(r1,r2,2);
+   g.add_edge(r2,r3,3);
+   g.add_edge(r1,r3,5);
+   g.display_edge();
 
     return 0;
 }
