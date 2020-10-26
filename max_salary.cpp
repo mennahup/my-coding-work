@@ -12,10 +12,10 @@ string largest_number(vector<string> a) {
   int temp1;
   int n;
   n=a.size();
-  int multiple=1;
-  int m[n]={1};
+  int multiple=1; //stores number of digits of each number
+  int m[n]={1};   //array of numberof digits of each number
   int max=0;
-  int deal[n]={0};
+  int deal[n]={0};   //stores digits as numbers instead of strings 
  //find max
  for(int i=0;i<n;++i){
   deal[i]=std::stoi(a[i]);
@@ -56,7 +56,7 @@ for(int i=0;i<n;i++){
 //sort
 for(int i=0;i<n-1;++i){
   for(int i=0;i<n-1;++i){
-   // sort the digits in the new form in descending order
+   // sort the digits in the new form in descending order (two arrays are sorted the array of numbers and the array of weights (number of digits of each number)
     if(deal[i+1]>deal[i]){  
       temp=deal[i];
       temp1=m[i];
