@@ -22,20 +22,15 @@ long long lcm_faster(long long int a, long long int b){
   prev_remainder=remainder;
   if(prev_remainder==0)
    return(a*b)/b;
- // std::cout<<"prev_remainder "<<remainder<<std::endl;
   remainder=b%remainder;
- //  std::cout<<"remainder "<<remainder<<std::endl;
    }
   else {
   remainder=b%a;
   prev_remainder=remainder;
   if(prev_remainder==0)
    return (a*b)/a;
- //   std::cout<<"prevremainder "<<remainder<<std::endl;
   remainder=a%remainder;
- // std::cout<<"remainder "<<remainder<<std::endl;
   }
-  //std::cout<<"preremainder "<<prev_remainder<<std::endl;
   if (remainder==0)
   return (a*b)/prev_remainder;
   int rn=prev_remainder;
@@ -44,9 +39,7 @@ long long lcm_faster(long long int a, long long int b){
      y=rn%rn1;
      rn=rn1;
      rn1=y;
-//  std::cout<<"rn  "<<rn<<std::endl;
-//  std::cout<<"rn+1 "<<rn1<<std::endl;
-//  std::cout<<"y"<<y<<std::endl;
+
   if(y==0)
    break;
  }
